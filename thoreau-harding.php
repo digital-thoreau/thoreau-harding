@@ -13,7 +13,7 @@
  * License URI:       https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * Requires at least: 5.7
  * Requires PHP:      7.4
- * Text Domain:       commentpress-jstor
+ * Text Domain:       thoreau-harding
  * Domain Path:       /languages
  *
  * @package Thoreau_Harding
