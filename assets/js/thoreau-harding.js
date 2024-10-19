@@ -6,8 +6,6 @@
  * @package Thoreau_Harding
  */
 
-
-
 /**
  * Create Thoreau Harding object.
  *
@@ -15,8 +13,6 @@
  * and "sub-namespaces" from it.
  */
 var Thoreau_Harding = Thoreau_Harding || {};
-
-
 
 /**
  * Set up Thoreau Harding when the page is ready.
@@ -125,12 +121,18 @@ jQuery(document).ready( function($) {
 		this.highlight_text = function( element ) {
 
 			// Define vars.
-			var match_text, para_text,
+			var text, match_text, para_text,
 				text_sig, textblock_id,
 				item, start, end;
 
+			// Bail if we have no text to match.
+			text = element.find( 'strong' );
+			if ( ! text.length ) {
+				return;
+			}
+
 			// Get matched text wrapped in <strong> tag.
-			match_text = element.find( 'strong' ).html().replace( /[\[\]']+/g,'' );
+			match_text = text.html().replace( /[\[\]']+/g,'' );
 
 			// Find the paragraph's text sig.
 			text_sig = element.closest( '.paragraph_wrapper' ).prop( 'id' ).split( '-' )[1];
