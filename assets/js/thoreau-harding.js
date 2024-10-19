@@ -199,7 +199,7 @@ jQuery(document).ready( function($) {
 							me.debug( 'Could not find word-replaced text:', match_text );
 
 							// Strip tags.
-							match_text = $(match_text).text();
+							match_text = $("<div/>").html(match_text).text();
 
 							// Get start.
 							start = para_text.indexOf( match_text );
